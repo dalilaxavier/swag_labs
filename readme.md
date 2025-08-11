@@ -7,7 +7,7 @@ Este repositório contém o material referente ao projeto de testes do site **Sw
 - **Plano_de_Testes.md**  
   Documento detalhando os objetivos, critérios, charters e técnicas de teste utilizadas.
 
-- **Relatorio_de_Teste.md**
+- **Relatorio_de_Teste.md** <br>
   Relatório com resultados da execução dos charters, bugs encontrados, evidências e conclusões.
 
 ## Ferramentas Utilizadas
@@ -19,5 +19,6 @@ Este repositório contém o material referente ao projeto de testes do site **Sw
 
 
 ## Sobre
+
 
 Este projeto foi realizado como parte do meu portfólio profissional na área de QA Manual, com foco em testes exploratórios e documentação de qualidade.
