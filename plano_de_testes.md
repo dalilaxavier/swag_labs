@@ -1,0 +1,111 @@
+# Plano de Testes
+## 1. Identificação:
+•	Nome: Plano de Testes - Swag Labs <br>
+•	Tipo de Teste: Teste Exploratório <br>
+•	Data do Documento: 25/07/2025 <br>
+•	Responsável: Dalila Xavier <br>
+
+## 2. Objetivo: 
+Avaliar manualmente o comportamento das principais funcionalidades do site Swag Labs, utilizando abordagem exploratória para identificar o comportamento esperado, garantindo a qualidade e usabilidade do sistema.
+
+## 3. Técnicas de Teste:
+•	Teste exploratório funcional: execução livre baseada em missões (charters) para descobrir problemas e oportunidades de melhoria. <br>
+•	Fluxo principal (Happy Path): validação do comportamento ideal do sistema. <br>
+•	Teste negativo: validação dos cenários inválidos para verificar ações inesperadas.
+
+## 4. Critérios de Entrada
+•	Ambiente de teste disponível e estável: https://www.saucedemo.com/v1/ <br>
+•	Credenciais de teste fornecidas: <br>
+| ACCEPTED USERNAMES |PASSWORD|
+|------|---------|
+|standard_user |secret_sauce
+|locked_out_user| secret_sauce
+|problem_user| secret_sauce
+|performance_glitch_user| secret_sauce
+
+## 5. Charters
+**CHT01 - Login de usuário**
+
+Missão: Explorar a funcionalidade de login utilizando todos os perfis disponíveis.
+
+Perguntas-Guia:
+
+1. É possível logar com as credenciais válidas?
+2. O sistema exibe mensagem de erro ao inserir E-mail inválido?
+3. O sistema exibe uma mensagem de erro ao inserir Senha inválida?
+4. O sistema exibe uma mensagem de erro ao deixar os campos em branco?
+5. O usuário *locked_out_user* é impedido de acessar o sistema? 
+6. O usuário *problem user* apresenta comportamento anômalo após o login?
+7. O usuário *performance_glitch_user* apresenta lentidão ou comportamento diferente após o login?
+----------------
+**CHT02 - Tela Inicial**
+
+Missão: Verificar a navegação do usuário e se é exibida uma lista de produtos com suas respectivas informações.
+
+Perguntas-Guia:
+
+1.  A lista de produtos apresenta todas as informações necessárias ( Nome, Imagem, Preço e Botão Add to Cart)?
+2. Os botões das mídias sociais funcionam corretamente?
+3. O botão de Menu Lateral está visível e funcional?
+4. A ordenação (Name e Price) funciona conforme esperado?
+ --------
+
+**CHT03 - Adição e Remoção de produtos ao carrinho**
+
+Missão: Validar o funcionamento do carrinho de compras ao adicionar ou remover itens.
+
+Perguntas-Guia:
+
+1. É possível adicionar produtos ao carrinho a partir da tela inicial?
+2. É possível remover produtos do carrinho a partir da tela inicial?
+3. É possível inserir múltiplos do mesmo produto ao carrinho?
+4. O contador do carrinho atualiza corretamente ao adicionar/remover produtos?
+5. É possível acessar e visualizar o conteúdo do carrinho? 
+
+ --------
+
+**CHT04 - Menu lateral**
+
+Missão: Avaliar a funcionalidade do menu lateral e suas opções. 
+
+Perguntas-Guia:
+
+1. Todas as opções do menu lateral estão funcionando corretamente?
+2. É possível encerrar a sessão do usuário ao clicar em Logout?
+
+ --------
+
+**CHT05 - Checkout**
+
+Missão: Validar o fluxo de finalização de compra.
+
+Perguntas-Guia:
+
+1. É possível fazer checkout a partir do carrinho?
+2. O sistema solicita os campos obrigatórios (First Name, Last Name, Postal Code)?
+3. É exibido um resumo dos itens selecionados com nome, descrição e preço? 
+4. Na conclusão da compra, o sistema apresenta uma mensagem de confirmação? 
+
+## 6. Critérios de Saída:
+•	Todos os charters executados. <br>
+•	Defeitos identificados e reportados. <br>
+•	Evidências geradas (prints/vídeos). <br>
+•	Relatório final de testes elaborado. <br>
+
+## 7. Ferramentas Utilizadas:
+•	Navegador: Google Chrome – Windows 10. <br>
+•	VS Code – Registro dos charters. <br>
+•	Snipping Tool e/ou Jam.dev – Captura e Gravação de Tela.
+
+## 8. Documentos Relacionados
+
+•	Relatório Final de Testes.
+
+## 9. Registro de Bugs:
+Os defeitos encontrados serão reportados contendo: <br>
+•	ID. <br>
+•	Descrição. <br>
+•	Evidências. <br>
+•	Gravidade. <br>
+•	Data. 
+

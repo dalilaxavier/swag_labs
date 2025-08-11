@@ -1,0 +1,89 @@
+# Relatório de Teste
+
+* Responsável: Dalila Xavier
+* Data de Execução: 08/07/2025
+* Ambiente: https://www.saucedemo.com/v1/
+
+## Resumo da Execução
+
+|Charter ID| Descrição do Charter | Status | Bugs Encontrados | 
+|----------|---------------------|-------------------|---------|
+CHT01 | Login de usuário | Concluído | B01
+CHT02 | Tela inicial | Concluído | B02
+CHT03 | Adição e Remoção de produtos ao carrinho | Concluído | B03
+CHT04 | Menu lateral |Concluído | B04
+CHT05 | Checkout | Concluído | B05, B06
+
+## Detalhamento por Charter
+
+**CHT01 - Login de Usuário**
+
+Resultados e observações:
+* Tentativa de login com cada perfil disponível.
+* Validação de erro ao inserir as credenciais inválidas.
+* O usuário *locked_out_user* é impedido de acessar o sistema.
+* O usuário *problem_user* apresentou imagens corrompidas após login.
+* O usuário *performance_glitch_user* apresentou performance normal após login.
+
+Bugs encontrados:
+
+ID | Descrição | Evidência | Gravidade | Data 
+---| --------- |-----------|-------|-------
+B01 | Falta de clareza na mensagem de login incorreto, não informando qual dos campos está incorreto. | [Evidência Bug01](https://jam.dev/c/1b11d5e5-a453-4233-b073-71d2bd80ec11)| Média | 28 de julho de 2025
+
+-------
+
+**CHT02 - Tela Inicial**
+
+Resultados e observações:
+* A lista de produtos apresenta as informações de nome, imagem, preço e botão Add to Cart.
+* Os botões de mídias sociais não executam nenhuma ação.
+* Botão de Menu lateral visível e funcional.
+* A ordenação (Name e Price) está funcionando da maneira correta.
+
+ID | Descrição | Evidência | Gravidade | Data
+---| --------- |---------------|-----|------
+B02 | Os botões de mídias sociais não contém ação. | [Evidência Bug02](https://jam.dev/c/adee61d4-284e-462b-b605-58f7fae4ad12)| Baixa | 8 de agosto de 2025
+-----------
+
+**CHT03 - Adição e Remoção de produtos ao carrinho**
+
+Resultados e observações:
+* Adição de diferentes produtos ao carrinho, conforme o esperado.
+* Não é possível adicionar múltiplos do mesmo produto ao carrinho.
+* Contador do carrinho atualiza corretamente, conforme esperado.
+* Acesso e visualização do carrinho é permitida com sucesso.
+
+ID | Descrição | Evidência | Gravidade | Data
+---| --------- |-----------|-----|-----
+B03 | Não é possível adicionar múltiplos do mesmo produto ao carrinho. | [Evidência Bug03](https://jam.dev/c/35f49baa-653f-493e-84d2-1e8337fdcde1) | Alta | 28 de julho de 2025
+
+
+**CHT04 - Menu lateral**
+
+Resultados e observações:
+* Todos os itens do Menu estão funcionando conforme o esperado. Com exceção do Reset App State, que ao clicar sobre o carrinho é zerado, porém o botão ‘Remove’ permanece visível na lista de produtos.
+* O usuário consegue encerrar a sessão e ser redirecionado a outra página ao clicar em Logout.
+
+ID | Descrição | Evidência | Gravidade | Data
+---| --------- |-----------|-------|------
+B04 | Ao clicar no item Reset App State, o carrinho atualiza, mas a lista de produtos não. | [Evidência Bug04](https://jam.dev/c/9fc517f3-2ab5-4518-8d6c-440e36048836)| Média | 28 de julho de 2025
+
+
+**CHT05 - Checkout**
+
+Resultados e observações:
+* O usuário consegue realizar o checkout conforme o esperado a partir do carrinho. 
+* Solicitação dos campos obrigatórios: First Name, Last Name, Postal Code.
+* Exibição do resumo dos itens selecionados conforme o esperado.
+* Após a conclusão da compra é exibida uma mensagem conforme o esperado.
+
+ID | Descrição | Evidência | Gravidade | Data
+---| --------- |---------------|----|------
+B05 | É possível concluir o checkout com os dados obrigatórios de forma inválida (cerquilha, pontuações e numerações incorretas). | [Evidência Bug05](https://jam.dev/c/45482205-d383-4894-95ca-1428748e7bb6)| Alta | 28 de julho de 2025
+B06 | É permitido realizar o checkout com o carrinho vazio. |[Evidência Bug06](https://jam.dev/c/ea3aae2a-45dc-4b0f-a7a8-ef38de4cc0b7)| Alta | 28 de julho de 2025
+
+
+## Conclusão Geral
+
+O teste exploratório abordou as principais funcionalidades do sistema conforme planejado. A maioria dos fluxos principais está funcional, porém foram identificados 6 bugs, dos quais 3 possuem alta gravidade, podendo impactar diretamente a experiência do usuário. Recomenda-se priorizar a correção desses defeitos para uma melhor estabilidade e usabilidade do sistema.
